@@ -5,7 +5,6 @@ import { Logo } from "../components/logo";
 import { SendHorizonal } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { RefreshCcw } from "lucide-react";
-// import { queryClient } from "../lib/query";
 
 export const Login = () => {
   const { register, handleSubmit, watch } = useForm();
@@ -23,11 +22,13 @@ export const Login = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-2">
         <div className="flex gap-x-2 my-2">
           <input
+            aria-label="example"
             defaultValue="test"
             {...register("example")}
             className="p-2 flex-1"
             autoComplete="off"
           />
+          <h1 aria-label="result">{watch("example")}</h1>
           <button type="submit">
             <SendHorizonal />
           </button>
@@ -48,7 +49,7 @@ function ExampleTanstack() {
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["repoData"],
     queryFn: async () => {
-      const id = Math.floor(Math.random()*10)+1
+      const id = Math.floor(Math.random() * 10) + 1;
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/todos/${id}`
       );
@@ -61,7 +62,7 @@ function ExampleTanstack() {
   if (isLoading) return "Loading...";
 
   if (error) return "An error has occurred: " + error.message;
-  console.log(data)
+  console.log(data);
   return (
     <div className="my-2 gap-y-2">
       <div className="flex gap-x-2 justify-center">

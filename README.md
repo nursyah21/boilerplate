@@ -13,6 +13,9 @@ minimal boilerplate to create your app with react include:
 - [lucidereact](https://lucide.dev/icons/)
 - [sweetalert](https://sweetalert2.github.io/#examples)
 - [react-hot-toast](https://react-hot-toast.com/)
+- [vitest](https://vitest.dev/guide/)
 
 why didn't use typescript?
 we need flexibility not otherwise
+
+dont add anymore than this library
