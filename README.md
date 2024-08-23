@@ -10,3 +10,6 @@ minimal boilerplate to create your app with react include:
 - [react-query](https://tanstack.com/query/latest/docs/framework/react/installation)
 - [tailwindcss](https://tailwindcss.com/docs/installation)
 - [lucidereact](https://lucide.dev/icons/)
+
+why didn't use typescript?
+we need flexibility not otherwise
